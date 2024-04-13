@@ -1,0 +1,2 @@
+getTimeVerkko.sh profiles verkko runtime, based on run dir, should be updated for HiC
+get_sacct_time.sh do the same with log file, works with HiC
