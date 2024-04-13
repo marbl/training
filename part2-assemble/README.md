@@ -19,7 +19,6 @@ Bioinformatics tools (available through conda via -c conda-forge -c bioconda -c 
   
 Bioinformatics tools (only available through github)
 - gfacpp (https://github.com/snurk/gfacpp)
-- marbl_utils (https://github.com/Dmitry-Antipov/marbl_utils)
 
 The steps and components required to build the docker image are in the subfolder docker. The commands.sh file lists the commands run as part of the tutorial along with some brief documentation. For more detailed usage information consult the original tool support pages. Some commands are too computationally expensive to run in a docker container and so they are commeted out assuming you'd run them on your own environment.
 
