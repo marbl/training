@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Session genome="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/bH_v2_both.fasta.gz" locus="chr13:0-98852847" nextAutoscaleGroup="2" version="8">
+    <Resources>
+        <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2.exclude.bed" type="bed"/>
+        <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2.telo.bed" type="bed"/>
+        <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2/bH_v2.microsatellite.GC.128.bw" type="bw"/>
+        <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2/bH_v2.microsatellite.GA.128.bw" type="bw"/>
+        <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2/bH_v2.microsatellite.TC.128.bw" type="bw"/>
+        <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2/bH_v2.microsatellite.AT.128.bw" type="bw"/>
+    </Resources>
+    <Panel height="342" name="DataPanel" width="1292">
+        <Track attributeKey="bH_v2.microsatellite.AT.128.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,153,51" fontSize="12" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2/bH_v2.microsatellite.AT.128.bw" name="bH_v2.microsatellite.AT.128.bw" renderer="LINE_PLOT" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="bH_v2.microsatellite.GC.128.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="0,0,255" fontSize="12" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2/bH_v2.microsatellite.GC.128.bw" name="bH_v2.microsatellite.GC.128.bw" renderer="LINE_PLOT" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="bH_v2.microsatellite.GA.128.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="204,0,204" fontSize="12" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2/bH_v2.microsatellite.GA.128.bw" name="bH_v2.microsatellite.GA.128.bw" renderer="LINE_PLOT" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="bH_v2.microsatellite.TC.128.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="204,0,204" fontSize="12" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2/bH_v2.microsatellite.TC.128.bw" name="bH_v2.microsatellite.TC.128.bw" renderer="LINE_PLOT" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+    </Panel>
+    <Panel height="168" name="FeaturePanel" width="1292">
+        <Track attributeKey="Reference sequence" clazz="org.broad.igv.track.SequenceTrack" fontSize="12" id="Reference sequence" name="Reference sequence" sequenceTranslationStrandValue="POSITIVE" shouldShowTranslation="false" visible="true"/>
+        <Track attributeKey="bH_v2.exclude.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="12" groupByStrand="false" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2.exclude.bed" name="bH_v2.exclude.bed" visible="true"/>
+        <Track attributeKey="bH_v2.telo.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="12" groupByStrand="false" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2.telo.bed" name="bH_v2.telo.bed" visible="true"/>
+    </Panel>
+    <PanelLayout dividerFractions="0.6653771760154739"/>
+    <HiddenAttributes>
+        <Attribute name="DATA FILE"/>
+        <Attribute name="DATA TYPE"/>
+        <Attribute name="NAME"/>
+    </HiddenAttributes>
+</Session>
