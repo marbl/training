@@ -1,0 +1,6 @@
+JOBID=$1
+
+echo -e "Elapsed\tCPU\tmaxMem\tmaxVmem\t%CPU\tAvgCPU"
+
+OUTPUT=`sacct -o "JobID,UserCPU,SystemCPU,TotalCPU,MaxRSS,MaxVMSize,CPUTimeRAW,Elapsed" -j $JOBID |grep -v JobID |grep -v "\-\-" |awk '{if (NF >=8) print $0}' |awk '{if (match($5, "K")) { MEM=substr($5, 1, length($5-1))/1024/1024;} else if (match($5, "M")) { MEM=substr($5, 1, length($5-1))/1024; } else if (match($5, "G")) { MEM=substr($5, 1, length($5-1)); } else { MEM=substr($5, 1, length($5)-1);} if (match($6, "K")) { VM=substr($6, 1, length($6-1))/1024/1024; } else { VM=substr($6, 1, length($6)-1)}; days=split($NF, a, "-"); if (days >1 ) { walltime=a[1]*24*60*60; $NF=a[2]; } else { walltime=0; } alen=split($NF, a, ":"); days=split($4, b, "-"); if (days >1 ) { cputime=b[1]*24*60*60; tm=b[2]; } else { cputime=0; tm=$4} blen=split(tm, b, ":"); sscale="3600_60_1"; slen=split(sscale, scale, "_"); j=slen; for (i=alen; i>0; i--) { walltime+=a[i]*scale[j]; j--; } j=slen; for (i=blen; i>0; i--) {cputime += b[i]*scale[j]; j--; }; if (walltime > 0) { wrat = cputime/walltime; } else { wrat = 0; }  print MEM" "VM" "cputime" "walltime" "wrat}' | awk -v MAX=0 -v MAXVM=0 -v ELAP=0 '{if ($1 > MAX) { MAX=$1; } if ($2 > MAXVM) { MAXVM=$2; } if ($4 > ELAP) { ELAP=$4; } SUM+=$3; TOTAL++; CPU+=100*$NF; print ELAP/60/60"\t"SUM/60/60"\t"MAX"\t"MAXVM"\t"CPU/TOTAL"\t"SUM/TOTAL/60/60}' |tail -n 1`
+echo "$OUTPUT"
