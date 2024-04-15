@@ -5,3 +5,4 @@ This repository contains instructions and command-lines covered in the AGBT-Ag w
 For a more detailed, general genome assembly tutorial, please refer to [this excelent material](https://github.com/human-pangenomics/hprc-tutorials/tree/GA-workshop/assembly/genomics_aotearoa/pages). The material was developed for a 3-day workshop to share genome assembly and evaluation strategies used by the HPRC, at Genomics Aotearoa. It covers a veriety of details that won't be covered in our workshop.
 
 * [Part 1 - Slides](https://docs.google.com/presentation/d/1JimkIa8w38xz7S2yKZynGOVGYS0yMMwGj9Up-Y80J0o/edit?usp=sharing)
+* [Part 3 - Slides](https://docs.google.com/presentation/d/1lFy3Iy-po-GrKbqtx_nSYcT4R4f51CVxzM_q69Ag2VY/edit?usp=sharing)
