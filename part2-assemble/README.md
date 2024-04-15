@@ -24,8 +24,8 @@ The steps and components required to build the docker image are in the subfolder
 
 The commands to download and run the tutorial using the existing image/data are:
 
-    curl -L https://s3.amazonaws.com/genomeark/trainingmaterials/AGBTAG2024/assembly-102.docker.tar.gz -o assembly-102.tar.gz
-    curl -L https://s3.amazonaws.com/genomeark/trainingmaterials/AGBTAG2024/tutorial_assembly_data.tar.gz -o tutorial.tar.gz
+    curl -L https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/assembly-102.tar.gz -o assembly-102.tar.gz
+    curl -L https://s3.amazonaws.com/genomeark/trainingmaterials/AGBTAG2024/tutorial.tar.gz -o tutorial.tar.gz
 
     # load image into your docker dashboard
     docker load -i assembly-102.tar.gz
