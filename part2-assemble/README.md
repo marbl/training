@@ -38,3 +38,7 @@ The commands to download and run the tutorial using the existing image/data are:
 Now just follow the commands.sh steps to try it out.
 
 The assembly folder contains a subset of the tutorial.tar.gz and results of some of the commands in the tutorial (to filter rDNA and satellite repeat from the graph). These are useful to look at the assembly in BandageNG without having to run/download the entire tutorial.
+
+## Bandage tip
+* Turn on "Arrowheads in single node style" under "Graph appearance" in bandage settings
+
