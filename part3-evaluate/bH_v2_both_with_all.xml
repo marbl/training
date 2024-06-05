@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<Session genome="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/bH_v2_both.fasta.gz" locus="chr13:0-98852847" nextAutoscaleGroup="3" version="8">
+<Session genome="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/bH_v2_both.fasta.gz" locus="chr14:28601066-28920016" nextAutoscaleGroup="4" version="8">
     <Resources>
         <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/mapping/ont/bHv2_both_ont.pri.cov.wig" type="wig"/>
         <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2.exclude.bed" type="bed"/>
         <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/mapping/ont/bHv2_both_ont.pri.issues.bed" type="bed"/>
         <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2/bH_v2.microsatellite.GC.128.bw" type="bw"/>
+        <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/merqury/illumina_k31_all/Pat_Bighorn.bw" type="bw"/>
         <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2/bH_v2.microsatellite.GA.128.bw" type="bw"/>
         <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/mapping/ont_bH/bHv2_only_ont.pri.cov.wig" type="wig"/>
         <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/mapping/hifi_bH/bHv2_only_hifi.pri.cov.wig" type="wig"/>
@@ -12,13 +13,14 @@
         <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/mapping/hifi/bHv2_both_hifi.pri.issues.bed" type="bed"/>
         <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/merqury/hybrid/hybrid_error.bed" type="bed"/>
         <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2.telo.bed" type="bed"/>
+        <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/illumina_error.bed" type="bed"/>
         <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/mapping/hifi/bHv2_both_hifi.pri.cov.wig" type="wig"/>
         <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/mapping/ont_bH/bHv2_only_ont.pri.issues.bed" type="bed"/>
         <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2/bH_v2.microsatellite.TC.128.bw" type="bw"/>
-        <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/merqury/illumina_k31_all/illumina_only.bed" type="bed"/>
+        <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/merqury/illumina_k31_all/Mat_Polype.bw" type="bw"/>
         <Resource path="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2/bH_v2.microsatellite.AT.128.bw" type="bw"/>
     </Resources>
-    <Panel height="495" name="DataPanel" width="1086">
+    <Panel height="692" name="DataPanel" width="1420">
         <Track attributeKey="HiFi_to_both Cov" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="255,102,0" fontSize="12" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/mapping/hifi/bHv2_both_hifi.pri.cov.wig" name="HiFi_to_both Cov" renderer="BAR_CHART" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
@@ -47,15 +49,21 @@
         <Track attributeKey="bH_v2.microsatellite.TC.128.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="204,0,204" fontSize="12" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2/bH_v2.microsatellite.TC.128.bw" name="bH_v2.microsatellite.TC.128.bw" renderer="LINE_PLOT" visible="true" windowFunction="mean">
             <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="100.0" minimum="0.0" type="LINEAR"/>
         </Track>
+        <Track attributeKey="Pat_Bighorn.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="51,0,153" fontSize="12" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/merqury/illumina_k31_all/Pat_Bighorn.bw" name="Pat_Bighorn.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="31.0" minimum="0.0" type="LINEAR"/>
+        </Track>
+        <Track attributeKey="Mat_Polype.bw" autoScale="false" clazz="org.broad.igv.track.DataSourceTrack" color="204,0,255" fontSize="12" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/merqury/illumina_k31_all/Mat_Polype.bw" name="Mat_Polype.bw" renderer="BAR_CHART" visible="true" windowFunction="mean">
+            <DataRange baseline="0.0" drawBaseline="true" flipAxis="false" maximum="30.0" minimum="0.0" type="LINEAR"/>
+        </Track>
     </Panel>
-    <Panel height="167" name="FeaturePanel" width="1086">
+    <Panel height="366" name="FeaturePanel" width="1420">
         <Track attributeKey="Reference sequence" clazz="org.broad.igv.track.SequenceTrack" fontSize="12" id="Reference sequence" name="Reference sequence" sequenceTranslationStrandValue="POSITIVE" shouldShowTranslation="false" visible="true"/>
         <Track attributeKey="bH_v2.exclude.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="12" groupByStrand="false" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2.exclude.bed" name="bH_v2.exclude.bed" visible="true"/>
         <Track attributeKey="bH_v2.telo.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="12" groupByStrand="false" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/bH_v2.telo.bed" name="bH_v2.telo.bed" visible="true"/>
         <Track attributeKey="hybrid_error.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="12" groupByStrand="false" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/merqury/hybrid/hybrid_error.bed" name="hybrid_error.bed" visible="true"/>
-        <Track attributeKey="illumina_only.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="12" groupByStrand="false" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/merqury/illumina_k31_all/illumina_only.bed" name="illumina_only.bed" visible="true"/>
+        <Track attributeKey="illumina_error.bed" clazz="org.broad.igv.track.FeatureTrack" fontSize="12" groupByStrand="false" id="https://genomeark.s3.amazonaws.com/trainingmaterials/AGBTAG2024/curation/pattern/illumina_error.bed" name="illumina_error.bed" visible="true"/>
     </Panel>
-    <PanelLayout dividerFractions="0.7428998505231689"/>
+    <PanelLayout dividerFractions="0.6516431924882629"/>
     <HiddenAttributes>
         <Attribute name="DATA FILE"/>
         <Attribute name="DATA TYPE"/>
