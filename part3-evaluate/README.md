@@ -57,6 +57,8 @@ Output files:
 ```
 Load them on IGV and investigate satellite repeat enriched region. Log along scaffolds that should be re-oriented to match the p and q arm definitions and/or match between haplotypes. Re-orienting can happen after read-mapping and polishing.
 
+[Here](part3-evaluate/bH_v2_both.xml) is an IGV session file. Navigate through chromosomes, and look for repeated patterns.
+
 ### Mapping reads back to the assembly
 Align all reads to 
 * both haplotypes
@@ -200,11 +202,11 @@ ln -s ../../merqury/hybrid/$asm.error.bed $asm.error.bed
 cd ../
 ```
 
-## Issues track
+## 4. Issues track
 
 Winnowmap submitter generates filtered bam and paf files at the end. The most informative issues comes from read_to_dip alignments.
 
-This step requires a lot of files to be in place. Make sure they exist in the proper location. Again, don't forget to link `$asm.error.bed` from Merqury hybrid.
+This step requires a lot of files to be in place. Make sure they exist in the proper location. Again, don't forget to link `$ver.error.bed` from Merqury hybrid.
 
 ```shell
 $tools/T2T-Polish/coverage/issues.sh
@@ -233,8 +235,10 @@ do
 done
 ```
 
-### Evaluate on IGV
+## 5. Evaluate on IGV
 Load the `*.issues.bed` and `*.cov.wig` on IGV, along with the pattern `*.bw` files, and enjoy(?) reading the error profiles!
+
+[Here](part3-evaluate/bH_v2_both_with_all.xml) is another IGV session file containing all tracks for the Bighorn assembly evaluation, as in the slides.
 
 ## Next steps
 Use the alignments to call variants, inspect, and create correction `.vcf` files.
