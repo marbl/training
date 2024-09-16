@@ -52,8 +52,8 @@ if [[ "$#" -ge 1 ]]; then
 fi
 hpcRef=`echo "$ref" |sed s/.fasta/.hpc.fasta/g`
 
-if [ ! -e mashmap.out ]; then
-   $mashmap -r $ref -q assembly.fasta --pi 95 -s 10000 -t 8
+if [ ! -e assembly.mashmap.out ]; then
+   $mashmap -r $ref -q assembly.fasta --pi 95 -s 10000 -t 8 -o assembly.mashmap.out
 fi
 
 if [ ! -e compressed.mashmap.out ]; then
@@ -69,7 +69,7 @@ if [ ! -e compressed.mashmap.out ]; then
       cd 8-hicPipeline
       $mashmap -r $hpcRef -q unitigs.hpc.fasta --pi 95 -s 10000 -t 8
       cd ..
-      ln -s 8-hicPipeline/mashmap.out compressed.sketch.msh
+      ln -s 8-hicPipeline/mashmap.out compressed.mashmap.out
    else
       cd 5-untip
 	  if [ ! -e unitig-unrolled-unitig-unrolled-popped-unitig-normal-connected-tip.fasta ]; then 
@@ -81,7 +81,7 @@ if [ ! -e compressed.mashmap.out ]; then
    fi
 fi
 
-hasNC=`cat mashmap.out |grep -c NC`
+hasNC=`cat assembly.mashmap.out |grep -c NC`
 g="."
 if [ $hasNC -gt 0 ]; then
    g="NC"
@@ -130,8 +130,8 @@ cat compressed.mashmap.out |grep -w -v -f tmp4 |awk -v M=$minLen '{if ($NF > 99 
 rm tmp.gfa tmp4
 
 minLen=`echo $minLen |awk '{print $1*10/5}'`
-cat mashmap.out |grep "$label1" |grep $g |awk -v M=$minLen '{if ($NF > 99 && $4-$3 > M) print $1"\t"$6"\t"$2"\t"$7}' |sort |uniq > translation_hap1
-cat mashmap.out |grep "$label2" |grep $g |awk -v M=$minLen '{if ($NF > 99 && $4-$3 > M) print $1"\t"$6"\t"$2"\t"$7}' |sort |uniq > translation_hap2
+cat assembly.mashmap.out |grep "$label1" |grep $g |awk -v M=$minLen '{if ($NF > 99 && $4-$3 > M) print $1"\t"$6"\t"$2"\t"$7}' |sort |uniq > translation_hap1
+cat assembly.mashmap.out |grep "$label2" |grep $g |awk -v M=$minLen '{if ($NF > 99 && $4-$3 > M) print $1"\t"$6"\t"$2"\t"$7}' |sort |uniq > translation_hap2
 
 minLen=`echo $minLen |awk '{print $1*15}'`
 cat translation_hap1|sort -k2,2|awk -v M=$minLen '{if ($3 > M) print $0}' |awk -v LAST="" -v S="" '{if (LAST != $2) { if (S > 0) print LAST"\t"C"\t"SUM/S*100"\t"MAX/S*100"\t"TIG; SUM=0; MAX=0; C=0; } LAST=$2; S=$NF; SUM+=$3; if (MAX < $3) MAX=$3; C+=1; TIG=$1} END {print LAST"\t"C"\t"SUM/S*100"\t"MAX/S*100"\t"TIG;}'  |awk '{print $1"\t"$4}' |sort -nk1,1 -s > chr_completeness_max_hap1
