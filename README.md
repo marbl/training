@@ -2,7 +2,7 @@
 
 This repository contains instructions and command-lines covered in our workshop, "Getting Over the T2T Finish Line".
 
-For a more detailed, general genome assembly tutorial, please refer to the [HPRC training material](https://github.com/human-pangenomics/hprc-tutorials). This material was developed to share genome assembly and evaluation strategies used by the HPRC, in Rome 2024. It covers a veriety of details that won't be covered in our workshop.
+For a more detailed, general genome assembly tutorial, please refer to the [HPRC training material](https://github.com/human-pangenomics/hprc-tutorials). These materials were developed to share genome assembly and evaluation strategies used by the HPRC, in Rome 2024. See also the [Verkko BGA24 intro](https://github.com/thebgacademy/T2T_with_verko/tree/main). These materials cover a veriety of details that won't be covered in this workshop.
 
 ## What you need
 * [BandageNG](https://github.com/asl/BandageNG)
