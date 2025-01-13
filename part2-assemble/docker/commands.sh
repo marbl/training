@@ -89,16 +89,17 @@ cd 8-manualResolution
 #touch empty.fasta
 #GraphAligner -t 1 -g ../5-untip/unitig-unrolled-unitig-unrolled-popped-unitig-normal-connected-tip.gfa -f empty.fasta -a empty.gaf \
 #	--diploid-heuristic 21 31 --diploid-heuristic-cache diploid.index
-#	--seeds-mxm-cache-prefix graph \  --bandwidth 15 \
+#	--seeds-mxm-cache-prefix graph \
+#	--bandwidth 15 \
 #	--seeds-mxm-length 30 \
 #	--mem-index-no-wavelet-tree \
 #	--seeds-mem-count 10000 && touch graph.index
 #for i in `ls ../3-align/split/*.fasta.gz`; do
 #	id=`echo $i |sed s/.fasta.gz//g`
 #	GraphAligner -t 24 -g ../5-untip/unitig-unrolled-unitig-unrolled-popped-unitig-normal-connected-tip.gfa -f $i -a $id.WORKING.gaf \
-#   --diploid-heuristic 21 31 --diploid-heuristic-cache diploid.index
-#   --seeds-mxm-cache-prefix graph \
-#		--seeds-mxm-windowsize 5000 --seeds-mxm-length 30 \
+# 	--diploid-heuristic 21 31 --diploid-heuristic-cache diploid.index
+# 	--seeds-mxm-cache-prefix graph \
+# 	--seeds-mxm-windowsize 5000 --seeds-mxm-length 30 \
 #		--seeds-mem-count 10000 \
 #		--bandwidth 15 \
 #		--multimap-score-fraction 0.99 \
