@@ -213,6 +213,8 @@ mkdir 6-rukki
 cd 6-rukki
 ln -s ../../verkko_v2.0/6-rukki/unitig-unrolled-unitig-unrolled-popped-unitig-normal-connected-tip.noseq.gfa
 ln -s ../../verkko_v2.0/6-rukki/unitig-unrolled-unitig-unrolled-popped-unitig-normal-connected-tip.colors.csv
+ln -s ../../verkko_v2.0/6-rukki/label1
+ln -s ../../verkko_v2.0/6-rukki/label2
 ln -s ../../verkko_v2.0/8-manualResolution/manual.paths.gaf unitig-unrolled-unitig-unrolled-popped-unitig-normal-connected-tip.paths.gaf
 ln -s ../../verkko_v2.0/8-manualResolution/manual.paths.gaf unitig-unrolled-unitig-unrolled-popped-unitig-normal-connected-tip.paths.tsv
 cd ../
